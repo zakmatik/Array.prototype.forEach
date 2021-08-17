@@ -26,7 +26,6 @@
 	"exports": {
 		".": [
 			{
-				"import": "./index.mjs",
 				"require": "./index.js",
 				"default": "./index.js"
 			},
@@ -34,7 +33,6 @@
 		],
 		"./auto": [
 			{
-				"import": "./auto.mjs",
 				"require": "./auto.js",
 				"default": "./auto.js"
 			},
@@ -42,7 +40,6 @@
 		],
 		"./implementation": [
 			{
-				"import": "./implementation.mjs",
 				"require": "./implementation.js",
 				"default": "./implementation.js"
 			},
@@ -50,7 +47,6 @@
 		],
 		"./polyfill": [
 			{
-				"import": "./polyfill.mjs",
 				"require": "./polyfill.js",
 				"default": "./polyfill.js"
 			},
@@ -58,7 +54,6 @@
 		],
 		"./shim": [
 			{
-				"import": "./shim.mjs",
 				"require": "./shim.js",
 				"default": "./shim.js"
 			},
@@ -71,7 +66,6 @@
 		"pretest": "npm run --silent lint && evalmd README.md",
 		"posttest": "aud --production",
 		"tests-only": "nyc tape 'test/**/*.js'",
-		"tests-esm": "nyc node test/index.mjs",
 		"test": "npm run tests-only && npm run tests-esm",
 		"lint": "eslint .",
 		"postlint": "es-shim-api --bound",
